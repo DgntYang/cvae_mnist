@@ -1,0 +1,28 @@
+data:
+  data_name: 'Mnist'
+  data_folder: './data'
+  size: 28
+  n_channel: 1
+
+model:
+  model_name: 'cvae'
+  latent_size: 2
+
+data_loader:
+  batch_size: 4096
+  num_workers: 0
+  pin_memory: False
+
+solver:
+  num_epochs: 200
+  optimizer: 'Adam'
+  lr: 1e-3
+  weight_decay: 0.01
+
+mode: ''
+
+checkpoint:
+  savepath: './checkpoints_mnist'
+  loadpath: ''
+
+generated_path: './generate'
